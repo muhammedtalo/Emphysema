@@ -1,4 +1,4 @@
-## Emphysema CT Classification with Visual–Topological Deep Learning
+# Emphysema CT Classification with Visual–Topological Deep Learning
 
 This repository contains the dataset and source code for a patient-level emphysema classification study using chest CT images.
 
@@ -6,7 +6,7 @@ The study evaluates automated emphysema classification using modern vision trans
 
 The CT images are located in the [Dataset](Dataset) folder.
 
-# Running Order of Notebooks
+## Running Order of Notebooks
 
 1. [Segmentation.ipynb](Segmentation.ipynb): This notebook performs lung-focused preprocessing, masking, and cropping of CT images.
 
