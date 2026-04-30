@@ -1,19 +1,19 @@
-# Emphysema CT Classification with Visual–Topological Deep Learning
+## Emphysema CT Classification with Visual–Topological Deep Learning
 
 This repository contains the dataset and source code for a patient-level emphysema classification study using chest CT images.
 
-## Study Overview
+The study evaluates automated emphysema classification using modern vision transformer models and topological deep learning features. The main framework combines DINOv2-based visual embeddings with persistent-homology-derived Betti-curve features using a cross-attention fusion model.
 
-This study focuses on automated emphysema classification from chest CT images. The dataset contains 1108 anonymized CT images, where each image corresponds to a unique patient.
+The CT images are located in the [Dataset](Dataset) folder.
 
-The images are categorized into four classes:
+# Running Order of Notebooks
 
-- Normal
-- Panlobular emphysema
-- Paraseptal emphysema
-- Centroacinar emphysema
+1. [Segmentation.ipynb](Segmentation.ipynb): This notebook performs lung-focused preprocessing, masking, and cropping of CT images.
 
-The study evaluates both four-class emphysema subtype classification and binary Normal-versus-Emphysema classification.
+2. [Topo_extractor.ipynb](Topo_extractor.ipynb): This notebook extracts topological features from CT images using persistent homology and Betti curves.
 
-The proposed framework combines visual features extracted from modern vision transformer models with topological features derived from persistent homology. In particular, DINOv2 visual embeddings are fused with Betti-curve features using a cross-attention-based fusion model.
+3. [Four_class_classification.ipynb](Four_class_classification.ipynb): This notebook performs four-class emphysema classification.
+
+4. [Binary_classification.ipynb](Binary_classification.ipynb): This notebook performs binary classification by merging all emphysema subtypes into a single emphysema class.
+
 
